@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>FormMap.ui.qml</file>
-        <file>FormData.ui.qml</file>
-        <file>qtquickcontrols2.conf</file>
-        <file>FormConfig.ui.qml</file>
-    </qresource>
-</RCC>
