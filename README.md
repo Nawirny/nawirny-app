@@ -1,2 +1,2 @@
-# nawirny-mobile
-Mobile application for location intelligence 
+# nawirny-app
+Multi-platfroms location intelligence application for entrepreneurs and businesses 
