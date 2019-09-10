@@ -12,7 +12,7 @@ Page {
     }
 
     Label {
-        text: qsTr("You are on Page 3.")
+        text: "You are on Page 3."
         anchors.centerIn: parent
     }
 }

@@ -18,7 +18,7 @@ ApplicationWindow {
             anchors.fill: parent
 
             Label {
-                text: "Opportunities around me"
+                text: qsTr("What's profitable here?")
                 elide: Label.ElideRight
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
@@ -71,10 +71,12 @@ ApplicationWindow {
         id: mainTabBar
         width: parent.width
         TabButton {
-            text: qsTr("Map")
+            //: Link to MAP form
+            text: qsTr("Location")
         }
         TabButton {
-            text: qsTr("Data")
+            //: Link to Intelligence/Data form
+            text: qsTr("Intelligence")
         }
 
     }

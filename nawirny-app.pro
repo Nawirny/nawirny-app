@@ -17,6 +17,17 @@ SOURCES += \
 
 RESOURCES += src/qml.qrc
 
+lupdate_only{
+SOURCES = *.qml \
+          *.js \
+          src/ui/*.qml \
+          src/*.qml \
+          src/ressource/js/*.js
+}
+
+TRANSLATIONS    = translations/nawirny_fr.ts \
+                  translations/nawirny_ar.ts
+
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
@@ -30,4 +41,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     LICENSE \
-    README.md
+    README.md \
+    translations/nawirny_ar.ts \
+    translations/nawirny_fr.ts

@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtLocation 5.10
+import QtPositioning 5.10
 
 Page {
 
