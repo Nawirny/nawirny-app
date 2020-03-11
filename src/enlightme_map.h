@@ -5,7 +5,7 @@
 #include <QAction>
 
 // QMapControl includes.
-#include <QMapControl/QMapControl.h>
+#include "QMapControl/src/QMapControl/QMapControl.h"
 
 using namespace qmapcontrol;
 

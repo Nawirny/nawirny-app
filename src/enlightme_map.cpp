@@ -1,8 +1,8 @@
 #include "enlightme_map.h"
 
 // QMapControl includes.
-#include <QMapControl/LayerMapAdapter.h>
-#include <QMapControl/MapAdapterOSM.h>
+#include "QMapControl/src/QMapControl/LayerMapAdapter.h"
+#include "QMapControl/src/QMapControl/MapAdapterOSM.h"
 
 #include <QGridLayout>
 
