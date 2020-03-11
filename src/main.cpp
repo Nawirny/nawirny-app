@@ -1,14 +1,17 @@
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
+// Qt includes.
+#include <QApplication>
+
 #include <QTranslator>
 #include <QLibraryInfo>
 #include <QDebug>
 
-int main(int argc, char *argv[])
-{
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+// Local includes.
+#include "enlightme_app.h"
 
-    QGuiApplication app(argc, argv);
+int main(int argc, char* argv[])
+{
+    // Create a QApplication.
+    QApplication app(argc, argv);
 
     QTranslator qtTranslator;
     qtTranslator.load("qt_" + QLocale::system().name(),
@@ -21,14 +24,14 @@ int main(int argc, char *argv[])
 
 //    qInfo()<<QLocale::system().name();
 
-    QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
+    // Create a Multidemo widget.
+    EnlightMeMainWindow enlightMeWindow;
+    enlightMeWindow.resize(380, 565);
+    enlightMeWindow.setWindowTitle("Enlight.me");  // qsTr("Enlight.me Application")
 
+    // Show the widget.
+    enlightMeWindow.show();
+
+    // Execute the application.
     return app.exec();
 }
